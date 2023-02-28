@@ -2,6 +2,8 @@
 
 The Recommendation system is desined to be modular to provide ***maximum code reusability*** , **decoupling of imp features** and **qucik turn around time in case of changes**. Though you might find some bugs here and there this being not a very polished solution as I tested with some of the test cases i could write up. 
 
+Disclaimer: The solution assumes that User level data (i.e Cost bracke and Cost Tracking) and Restaurant data will always be available when running the recommendation system. If we don't have a predifined prefference of the customer, there stands little to gain from running a recommendation system.
+
 # Components
 
  - Pool of Conditions made from filters
