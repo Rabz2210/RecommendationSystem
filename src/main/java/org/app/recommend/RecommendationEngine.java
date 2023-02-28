@@ -24,6 +24,9 @@ public class RecommendationEngine {
 
     public String[] getRestaurantRecommendations(User user, Restaurant[] availableRestaurants) {
 
+        if(Objects.isNull(user) || Objects.isNull(availableRestaurants))return null;
+        if(user.getCostBrackets().length==0 || user.getCuisines().length==0)return null;
+
         //Chaning the Array to ArrayList
      List<Restaurant> availRest = Arrays.asList(availableRestaurants);
 

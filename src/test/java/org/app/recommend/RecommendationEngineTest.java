@@ -66,4 +66,11 @@ public class RecommendationEngineTest {
         String[] res = engine.getRestaurantRecommendations(user,listOfRestaurants);
         assertNotNull(res);
     }
+    @Test
+    public void testGetRestaurantRecommendationsWithoutUser() {
+        RecommendationEngine engine = new RecommendationEngine(criteriaSet);
+        User user1 = new User(new CuisineTracking[]{},new CostTracking[]{});
+        String[] res = engine.getRestaurantRecommendations(user1,listOfRestaurants);
+        assertNull(res);
+    }
 }
